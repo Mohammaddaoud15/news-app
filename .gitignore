@@ -51,3 +51,4 @@ build/
 
 # Ignore API key file
 config/api_config.dart
+.env

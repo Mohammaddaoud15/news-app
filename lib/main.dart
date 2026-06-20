@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'models/news_article.dart';
 import 'data/sample_data.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(const NewsApp());
 }
-
 class NewsApp extends StatelessWidget {
   const NewsApp({super.key});
 
